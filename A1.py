@@ -139,9 +139,80 @@ print(f'{customer[0]},我们还是照常吃饭哈')
 print(f'{customer[1]},我们还是照常吃饭哈')
 
 print('晚饭结束了...')
-del customer[1]
+del customer[0]
 print(customer)
-del customer[2]
-print(customer)
+del customer[0]
+print(customer,'\n')
 
+print('11.sort()对列表永久排序')
+cars = ['bmw','audi','toyota','subaru']
+print(f'按小写字母顺序排序{cars}')
+cars.sort()
+print(cars,'\n')
+
+print('12.sort(reverse = ture)按小写字母倒叙排序')
+cars = ['bmw','audi','toyota','subaru']
+print(f'按小写字母倒序排序{cars}')
+cars.sort(reverse=True)
+print(cars,'\n')
+
+print('13.sorted()对列表临时排序')
+cars = ['bmw','audi','toyota','subaru']
+print(f'临时按小写字母倒序排序{cars}')
+print(sorted(cars))                       # 注意sorted()的格式
+print(f'实际列表{cars}\n')
+
+print('14.reverse()永久性倒顺打印列表')
+cars = ['bmw','audi','toyota','subaru']
+print(f'按倒序排序{cars}')
+cars.reverse()
+print(cars,'\n')
+
+print('15.len()确定列表长度')
+cars = ['bmw','audi','toyota','subaru']
+print(f'{cars}列表的长度')
+print(len(cars),'\n')
+
+print('练习3-8：放眼世界　想出至少5个你渴望去旅游的地方.\n'
+      '将这些地方存储在一个列表中，并确保其中的元素不是按字母顺序排列的。\n'
+      '按原始排列顺序打印该列表。不要考虑输出是否整洁的问题，只管打印原始Python列表。\n'
+      '使用sorted()按字母顺序打印这个列表，同时不要修改它。\n'
+      '再次打印该列表，核实排列顺序未变。\n'
+      '使用sorted()按与字母顺序相反的顺序打印这个列表，同时不要修改它。\n'
+      '再次打印该列表，核实排列顺序未变。'
+      '使用reverse()修改列表元素的排列顺序。打印该列表，核实排列顺序确实变了。\n'
+      '使用reverse()再次修改列表元素的排列顺序。打印该列表，核实已恢复到原来的排列顺序。\n'
+      '使用sort()修改该列表，使其元素按字母顺序排列。打印该列表，核实排列顺序确实变了。\n'
+      '使用sort()修改该列表，使其元素按与字母顺序相反的顺序排列。打印该列表，核实排列顺序确实变了。')
+print('............................................................................')
+place = ['beijing','shanghai','shenzhen','guangzhou','wuhan']
+print(f'我想去{place}。')
+print(f'按照字母排序\n{sorted(place)}')
+print(f'原有顺序\n{place}')
+
+print(f'按照字母倒叙排序\n{sorted(place,reverse=True)}')                  # 记清楚sorted(列表,reverse=True/False)
+print(f'原有顺序\n{place}')
+
+print('永久修改列表排序')
+place.reverse()
+print(f'原列表{place}')
+
+print('还原列表')
+place.reverse()
+print(place)
+
+print('字母正序')
+place.sort()
+print(place)
+
+print('字母倒序')
+place.sort(reverse=True)
+print(place)
+
+print('..........................................................')
+print('3.5　小结在本章中，你学习了：列表是什么以及如何使用其中的元素；如何定义列表以及如何增删元素；\n'
+      '如何对列表进行永久性排序，以及如何为展示列表而进行临时排序；如何确定列表的长度，以及在使用列\n'
+      '表时如何避免索引错误。在第4章，你将学习如何以更高效的方式处理列表元素。通过使用为数不多的几\n'
+      '行代码来遍历列表元素，你就能高效地处理它们，即便列表包含数千乃至数百万个元素。')
+print('"keep going!"')
 
