@@ -133,4 +133,92 @@ badlist = ['ni','ta','Ta']
 if badlist != 'wo':
     print('Yes!!!')
 
-print('FIGHTING!')
+print('5.3.1简单的if语句')
+age = 19
+if age >=18:
+    print('You are old enough to vote!\n')
+
+print('5.3.2 if-else语句')
+age = 17
+if age >=18:
+    print('You are old enough to vote!')
+else:
+    print('Sorry,you are too young to vote.\n')
+
+print('5.3.3 if-elif-else结构')
+age = 12
+if age < 4:
+    print("Your admission cost is $0.")
+elif age < 18:
+    print("Your admission cost is $25.")
+else:
+    print("Your admission cost is $40.")
+print('')
+
+print('更简洁的版本：')
+age = 12
+if age < 4:
+    price = 0
+elif age < 18:
+    price = 25
+else:
+    price = 40
+print(f'Your admission cost is ${price}.')
+
+print('5.3.4　使用多个elif代码块')
+age = 13
+if age < 4:
+    price = 0
+elif age < 18:
+    price = 25
+elif age < 65:
+    price = 20
+print(f'Your admission cost is ${price}.\n')
+
+print('5.3.5　省略else代码块\n'
+      '在有些情况下，else代码块很有用；而在其他一些情况下，使用一条elif语句来处理特定的情形更清晰：\n'
+      'else是一条包罗万象的语句，只要不满足任何if或elif中的条件测试，其中的代码就会执行。')
+age = 12
+if age < 4:
+    price = 0
+elif age < 18:
+    price = 25
+elif age < 65:
+    price = 40
+elif age >= 65:
+    price = 20
+print(f"Your admission cost is ${price}.")
+
+print('5.3.6测试多个条件')
+requested_toppings = ['mushroom','extra cheese']
+if 'mushroom' in requested_toppings:
+    print('Adding mushrooms.')
+if 'pepperoni' in requested_toppings:
+    print('Adding pepperoni.')
+if 'extra cheese' in requested_toppings:
+    print('Adding extra cheese.')
+print('\nFinished making your pizaa!')
+
+print("练习5-3：外星人颜色　假设在游戏中刚射杀了一个外星人，\n"
+      "请创建一个名为alien_color的变量，并将其赋值为'green'、'yellow'或'red'。\n"
+      "▲ 编写一条if语句，检查外星人是否是绿色的。如果是，就打印一条消息，指出玩家获得了5分\n"
+      "▲ 编写这个程序的两个版本，在一个版本中上述测试通过了，而在另一个版本中未通过（未通过测试时没有输出）。")
+alien_color = ['green','yellow','red']
+for color in alien_color:
+    if color == 'green':
+        print('You got 1 point!')
+
+print('练习5-4：外星人颜色2　像练习5-3那样设置外星人的颜色，并编写一个if-else结构。\n'
+      '▲ 如果外星人是绿色的，就打印一条消息，指出玩家因射杀该外星人获得了5分。\n'
+      '▲ 如果外星人不是绿色的，就打印一条消息，指出玩家获得了10分。\n'
+      '▲ 编写这个程序的两个版本，在一个版本中执行if代码块，在另一个版本中执行else代码块。')
+alien_color = ['green','yellow','red']
+for color in alien_color:
+    if color == 'green':
+        point = 5
+    if color != 'green':
+        point = 10
+print(f'You got {point}.')
+
+print('另一个版本')
+
