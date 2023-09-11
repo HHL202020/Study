@@ -218,7 +218,73 @@ for color in alien_color:
         point = 5
     if color != 'green':
         point = 10
-print(f'You got {point}.')
+print(f'You got {print}.')
 
 print('另一个版本')
+alien_color = ['green','yellow','red']
+if 'green' in alien_color:
+    price = 5
+else:
+    price = 10
+print(f'You got {price}')
+
+print('练习5-5：外星人颜色3　将练习5-4中的if-else结构改为if-elif-else结构。\n'
+      '▲ 如果外星人是绿色的，就打印一条消息，指出玩家获得了5分。\n'
+      '▲ 如果外星人是黄色的，就打印一条消息，指出玩家获得了10分。\n'
+      '▲ 如果外星人是红色的，就打印一条消息，指出玩家获得了15分。\n'
+      '▲ 编写这个程序的三个版本，分别在外星人为绿色、黄色和红色时打印一条消息。')
+alien_color = ['green','yellow','red']
+if 'green' in alien_color:
+    price = 5
+elif 'yellow' in alien_color:
+    price = 10
+else:
+    price = 10
+print(f'You got {price}.\n')
+
+alien_color = ['green','yellow','red']
+if 'green' in alien_color:
+    print('The player got 5 points.')
+if 'yellow' in alien_color:
+    print('The player got 10 points.')
+if 'red' in alien_color:
+    print('The player got 15 points.')
+
+print('练习5-6：人生的不同阶段　设置变量age的值，再编写一个if-elif-else结构，\n'
+      '根据age的值判断一个人处于人生的哪个阶段。\n'
+      '▲ 如果年龄小于2岁，就打印一条消息，指出这个人是婴儿。\n'
+      '▲ 如果年龄为2（含）～4岁，就打印一条消息，指出这个人是幼儿。\n'
+      '▲ 如果年龄为4（含）～13岁，就打印一条消息，指出这个人是儿童。\n'
+      '▲ 如果年龄为13（含）～20岁，就打印一条消息，指出这个人是青少年。\n'
+      '▲ 如果年龄为20（含）～65岁，就打印一条消息，指出这个人是成年人。\n'
+      '▲ 如果年龄超过65岁（含），就打印一条消息，指出这个人是老年人。')
+age = int(input('请输入您的年龄：\n'))
+if age < 2 :
+    print('这个人是一个婴儿。')
+elif age <= 4 :
+    print('这个人是一个幼儿。')
+elif age <= 13:
+    print('这个人是一个儿童。')
+elif age <= 20:
+    print('这个人是一个青少年。')
+elif age <= 65:
+    print('这个人是一个成年人。')
+elif age >65:
+    print('这个人是一个老年人。')
+print('')
+
+print('练习5-7：喜欢的水果　创建一个列表，其中包含你喜欢的水果，再编写一系列独立的if语句，\n'
+      '检查列表中是否包含特定的水果。\n'
+      '▲ 将该列表命名为favorite_fruits，并在其中包含三种水果。\n'
+      '编写5条if语句，每条都检查某种水果是否包含在列表中。如果是，就打印一条消息，下面是一个例子。')
+favorite_fruits = ['apple','banana','watermelon']
+if 'apple' in favorite_fruits:
+    print('apple is my favorite fruit.')
+if 'banana' in favorite_fruits:
+    print('banana is my favorite fruit.')
+if 'watermelon' in favorite_fruits:
+    print('watermelon is my favorite fruit.')
+
+print('5.4　使用if语句处理列表')
+print('5.4.1　检查特殊元素')
 
