@@ -287,4 +287,56 @@ if 'watermelon' in favorite_fruits:
 
 print('5.4　使用if语句处理列表')
 print('5.4.1　检查特殊元素')
+requested_toppings = ['mushrooms','green peppers','extra cheese']
+for requested_topping in requested_toppings:
+    print(f'Adding {requested_topping}')
 
+print('\nFinished making your pizza!')
+
+requested_toppings = ['mushrooms','green peppers','extra cheese']
+for requested_topping in requested_toppings:
+    if requested_topping == 'green peppers':
+        print('Sorry ,we are out of green peppers right now.')
+    else:
+        print(f'Adding {requested_topping}')
+
+print('\nfinished making your pizza!\n')
+
+print('5.4.2　确定列表不是空的')
+requested_topping = []
+if requested_topping:
+    for requested_topping in requested_toppings:
+        print(f'Adding {requested_topping}')
+    print('\nFinished making your pizza!')
+else:
+    print('Are you sure you want a plain pizza?')
+
+print('5.4.3　使用多个列表')
+available_toppings = ['mushrooms','olives','green peppers',
+                      'pepperoni','pineapple','extra cheese']
+requested_topping = ['mushroom','frensh fries','extra cheese']
+for requested_topping in requested_toppings:
+    if requested_topping in available_toppings:
+        print(f'Adding {requested_topping}')
+    else:
+        print("Sorry ,we don't have {requested_topping}")
+
+print('\nFinished making pizza!\n')
+
+print("练习5-8：以特殊方式跟管理员打招呼　创建一个至少包含5个用户名的列表，且其中一个用户名为'admin'。\n"
+      "想象你要编写代码，在每位用户登录网站后都打印一条问候消息。遍历用户名列表，并向每位用户打印一条问候消息。\n"
+      "如果用户名为'admin'，就打印一条特殊的问候消息，\n"
+      "如下所示。Hello admin, would you like to see a status report?\n"
+      "否则，打印一条普通的问候消息，\n"
+      "如下所示。Hello Jaden, thank you for logging in again.\n")
+names = ['aaaa','bbbb','cccc','dddd','admin']
+for name in names:
+    if name == "admin":
+        print(f'Hello {name.title()},would you like to see a status report?')
+    else:
+        print(f'Hello {name.title()},thank you for logging in again.')
+
+print('练习5-9：处理没有用户的情形　在为完成练习5-8编写的程序中，添加一条if语句，检查用户名列表是否为空。\n'
+      '如果为空，就打印如下消息。\n'
+      'We need to find some users!\n'
+      '删除列表中的所有用户名，确定将打印正确的消息。\n')
