@@ -340,3 +340,4 @@ print('练习5-9：处理没有用户的情形　在为完成练习5-8编写的�
       '如果为空，就打印如下消息。\n'
       'We need to find some users!\n'
       '删除列表中的所有用户名，确定将打印正确的消息。\n')
+print（'I need green block HeyHey!'）
