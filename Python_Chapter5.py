@@ -340,4 +340,49 @@ print('练习5-9：处理没有用户的情形　在为完成练习5-8编写的�
       '如果为空，就打印如下消息。\n'
       'We need to find some users!\n'
       '删除列表中的所有用户名，确定将打印正确的消息。\n')
-print（'I need green block HeyHey!'）
+names = []
+print(bool(names))
+for name in names:
+    if bool(names) == False:
+        print('We need to find some users!')
+    elif name == "admin":
+        print(f'Hello {name.title()},would you like to see a status report?')
+    else:
+        print(f'Hello {name.title()},thank you for logging in again.')
+
+print("练习5-10：检查用户名　按下面的说明编写一个程序，模拟网站如何确保每位用户的用户名都独一无二。\n"
+      "▲ 创建一个至少包含5个用户名的列表，并将其命名为current_users。\n"
+      "▲ 再创建一个包含5个用户名的列表，将其命名为new_users，\n"
+      "并确保其中有一两个用户名也包含在列表current_users中。\n"
+      "▲ 遍历列表new_users，对于其中的每个用户名，都检查它是否已被使用。\n"
+      "如果是，就打印一条消息，指出需要输入别的用户名；否则，打印一条消息，指出这个用户名未被使用。\n"
+      "▲ 确保比较时不区分大小写。换句话说，如果用户名'John'已被使用，应拒绝用户名'JOHN'。\n"
+      "（为此，需要创建列表current_users的副本，其中包含当前所有用户名的小写版本。）\n")
+current_users = ['Aaaa','Bbbb','cccc','Dddd','Eeee']
+new_users = ['Aaaa','Bbbb','Hhhh','yyyy','Jjjj']
+
+current_users2 =  [current_user.lower()for current_user in current_users]
+print(current_users2)
+new_users2 = [new_user.lower()for new_user in new_users]
+print(new_users2)
+
+for user in new_users2:
+    if user in current_users2:
+        print(f'{user}这个用户名已被使用。')
+    else:
+        print(f'{user}这个用户名未被使用。')
+print('')
+
+a = []
+for i in range(10):
+    a.append(i)
+print(a)
+a.remove(0)
+print(a)
+for a1 in a:
+    if a1 == 1:
+        print('%dst'%(a1))
+    elif a1 == 2:
+        print(f'{a1}nd')
+    else:
+        print('%dst'%(a1))
